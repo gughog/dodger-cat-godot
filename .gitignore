@@ -1,0 +1,5 @@
+.import # all the assets are (re)imported here
+.fscache # not sure if needed in 3.1 (only if running in self-contained mode)
+export.cfg # platform-specific (2.1?)
+export_presets.cfg # platform-specific, may contain script encryption keys
+*.translation # imported from .csv
