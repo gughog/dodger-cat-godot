@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://HUD.gd" type="Script" id=2]
+[ext_resource path="res://art/logo/dodger-cat.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -18,10 +19,26 @@ script = ExtResource( 2 )
 
 [node name="ScoreLabel" type="Label" parent="."]
 anchor_right = 1.0
+margin_left = 275.0
 margin_bottom = 78.0
 custom_fonts/font = SubResource( 1 )
 text = "0"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -222.5
+margin_top = -62.0
+margin_right = 222.5
+margin_bottom = 62.0
+texture = ExtResource( 3 )
+stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -33,7 +50,6 @@ anchor_bottom = 0.5
 margin_top = -39.0
 margin_bottom = 39.0
 custom_fonts/font = SubResource( 1 )
-text = "Go kitty, Dodge 'em all!"
 align = 1
 autowrap = true
 __meta__ = {
