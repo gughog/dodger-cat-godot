@@ -16,8 +16,9 @@ func show_game_over():
 	# Wait until MessageTimer has counted down (yield = receive)
 	yield($MessageTimer, "timeout");
 
-	$Message.text = "Go kitty, Dodge 'em all!";
-	$Message.show();
+	# $Message.text = "Go kitty, Dodge 'em all!";
+	# $Message.show();
+	$Logo.show();
 
 	# Make a one-shot timer and wait them to finish
 	yield(get_tree().create_timer(1), "timeout");

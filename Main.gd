@@ -7,8 +7,6 @@ var score;
 func _ready() -> void:
 	randomize();
 	$MenuMusic.play();
-	# new_game();
-
 func new_game() -> void:
 	score = 0;
 	$Player.start($StartPosition.position);
@@ -18,6 +16,7 @@ func new_game() -> void:
 	$Music.play();
 
 	$HUD.update_score(score);
+	$HUD/Logo.hide();
 	$HUD.show_message("Get ready...");
 
 func game_over() -> void:
