@@ -7,6 +7,7 @@ var score;
 func _ready() -> void:
 	randomize();
 	$MenuMusic.play();
+	$HUD/ScoreLabel.hide();
 func new_game() -> void:
 	score = 0;
 	$Player.start($StartPosition.position);
@@ -17,6 +18,7 @@ func new_game() -> void:
 
 	$HUD.update_score(score);
 	$HUD/Logo.hide();
+	$HUD/ScoreLabel.show();
 	$HUD.show_message("Get ready...");
 
 func game_over() -> void:
@@ -29,6 +31,7 @@ func game_over() -> void:
 	
 	yield(get_tree().create_timer(1.5), "timeout");
 	$MenuMusic.play();
+	$HUD/ScoreLabel.hide();
 	# Deletes all mobs in the "mobs" group
 	# get_tree().call_group("mobs", "queue_free");
 
